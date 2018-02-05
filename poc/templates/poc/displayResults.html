@@ -1,0 +1,24 @@
+{% extends "public/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h5 style="text-align:center; border-bottom: 1px #DDD solid; padding: 0.45em 0.6em;">Results:</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div style="padding-left:0.45em; border-bottom: 1px #DDD solid; ">
+      {% autoescape off %}
+      {{ html }}
+      {% endautoescape %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4" style="padding-top:0.75em; padding-bottom:0.75em">
+      <a class="btn btn-primary btn-block" href="index.html" role="button">Try Again</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

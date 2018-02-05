@@ -1,5 +1,49 @@
-Hello World!
+{% extends "public/base.html" %}
+{% block content %}
+<script type="text/javascript">
+function validateForm() {
+  var val = $('#text')[0].value;
+  if (!(/\S/.test(val))) {
+    alert('Please enter text to analyze');
+    return false;
+  }
+  if($('#model')[0].value === "") {
+    alert('Please select a model');
+    return false;
+  }
+  return true;
+}
+</script>
+<div class="container">
+  <form name="mainForm" action="display-results.html" method="post" onsubmit="return validateForm()">
+    <div class="row">
+      <div class="col-sm">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">What would you like to analyze?</label>
+          <textarea id="text" name="text" class="form-control" id="exampleFormControlTextarea1" rows="6" style="font-size:0.9rem;"></textarea>
+        </div>  
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Which model?</label>
+          <select id="model" name="model" class="form-control" id="exampleFormControlSelect1">
+            <!-- <option value="">Select</option> -->
+            {% for model in modelList %}
+            <option value="{{ model.location }}">{{ model.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2" style="padding-bottom:0.75em">
+        <input class="btn btn-primary btn-block" type="submit" value="Submit">
+      </div>
+    </div>
+    {% csrf_token %}
+  </form>
+</div>
+{% endblock %}
 
-{% autoescape off %}
-{{ html }}
-{% endautoescape %}

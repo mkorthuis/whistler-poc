@@ -86,6 +86,9 @@ DATABASES = {
         'PASSWORD' : 'Zaq!xsw2',
         'HOST' : 'localhost',
         'PORT' : '',
+        'OPTIONS': {
+            'connect_timeout': 28800
+        }
     }
 }
 

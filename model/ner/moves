@@ -1,0 +1,32 @@
+Å´transitions⁄í[
+  {
+    "clas":0,
+    "move":1,
+    "label":"ANATOMY",
+    "name":"B-ANATOMY"
+  },
+  {
+    "clas":1,
+    "move":2,
+    "label":"ANATOMY",
+    "name":"I-ANATOMY"
+  },
+  {
+    "clas":2,
+    "move":3,
+    "label":"ANATOMY",
+    "name":"L-ANATOMY"
+  },
+  {
+    "clas":3,
+    "move":4,
+    "label":"ANATOMY",
+    "name":"U-ANATOMY"
+  },
+  {
+    "clas":4,
+    "move":5,
+    "label":"",
+    "name":"O"
+  }
+]

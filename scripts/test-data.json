@@ -1,0 +1,30 @@
+{
+    "labels": ["ANATOMY"],
+    "data": [
+        ["Clinical indication: Status post MVC; rule out injury.", {
+            "entities": []
+        }],
+        ["Contrast-enhanced CT scan of the chest performed.", {
+            "entities": [
+                [44, 49, "ANATOMY"]
+            ]
+        }],
+
+        ["There are no pathologically enlarged lymph nodes in the thorax.", {
+            "entities": [
+                [37, 48, "ANATOMY"]
+            ]
+        }],
+        ["Heart size is normal with no pericardial effusion.", {
+            "entities": [
+                [0, 5, "ANATOMY"]
+            ]
+        }],
+        ["The main pulmonary artery and thoracic aorta are normal caliber.", {
+            "entities": [
+                [9, 25, "ANATOMY"],
+                [30, 44, "ANATOMY"]
+            ]
+        }]
+    ]
+}
